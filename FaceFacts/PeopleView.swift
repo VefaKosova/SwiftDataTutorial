@@ -23,6 +23,13 @@ struct PeopleView: View {
         }
     }
     
+    init(searchString: String = "") {
+        _people = Query(filter: #Predicate { person
+            in
+            true
+        })
+    }
+    
     func deletePeople(at offsets: IndexSet) {
 //        try? modelContext.delete(model: Person.self) to delete all
         
